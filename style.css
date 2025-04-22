@@ -1,0 +1,127 @@
+ <style>
+    :root {
+      --bg: #fbfbfa;
+      --section-bg: #f0f0ef;
+      --text: #1f1f1f;
+      --accent: #5e60ce;
+      --border: #dcdcdc;
+      --highlight: #ffcb77;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem;
+      transition: background-color 0.3s, color 0.3s;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dark-mode {
+      --bg: #1a1a1a;
+      --section-bg: #2a2a2a;
+      --text: #f1f1f1;
+      --border: #444;
+      --highlight: #ffe066;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      color: var(--accent);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent);
+    }
+
+    .section {
+      background-color: var(--section-bg);
+      padding: 1.75rem;
+      margin-top: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .highlight {
+      background-color: var(--highlight);
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+
+    ul li::marker {
+      content: "✨ ";
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--section-bg);
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 100;
+    }
+
+    .floating-badge {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      background-color: var(--accent);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
